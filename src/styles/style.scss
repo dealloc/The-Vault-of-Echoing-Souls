@@ -1,0 +1,15 @@
+@use './utilities.scss';
+@use './components/table';
+@use './components/image';
+@use './components/rolls';
+@use './components/traits';
+@use './components/narrate';
+@use './components/sidebar';
+@use './components/encounter';
+@use './components/typography';
+
+// this one doesn't style a specific component, but rather the journal window itself.
+@use './components/window';
+
+// and finally support for external libraries that are optionally supported, uncomment if not used.
+@use './components/external/polyglot';

@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "target": "ES2015",
+        "types": ["@league-of-foundry-developers/foundry-vtt-types"]
+    }
+}

@@ -1,0 +1,16 @@
+@use '../theme.scss';
+
+// styles <aside> blocks that have been aligned to the side explicitly.
+@include theme.journal-page {
+    aside.right {
+        color: theme.$aside-text;
+        background: theme.$aside-background;
+        border-left: 2px solid theme.$aside-border-color;
+        width: calc(50% + theme.$journal-padding);
+        padding-left: theme.$journal-padding;
+
+        @include theme.headings {
+            border-bottom-color: theme.$aside-text;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@use "sass:color";
+
+// Colouring
+$primary: #5e0000;
+$secondary: #171f69;
+$tertiary: #e9d7a1;
+
+// Typography
+$text-size: 16px;
+$text-light: var(--color-text-light-0);
+$text-dark: var(--color-text-dark-primary);
+
+// Whitespace
+$journal-padding: 0.5em;
+
+/**
+ * Components
+ */
+
+// encounter blocks
+$encounter-background: $tertiary;
+$encounter-text: $text-dark;
+
+// narrate blocks
+$narrate-background: $tertiary;
+$narrate-background-hover: color.adjust($tertiary, $lightness: -20%);
+$narrate-text: $text-dark;
+$narrate-text-hover: $text-dark;
+
+// roll blocks
+$roll-background: $primary;
+$roll-background-secret: $secondary;
+$roll-text: $text-light;
+$roll-text-secret: $text-light;
+
+// aside blocks
+$aside-background: transparent;
+$aside-text: $secondary;
+$aside-border-color: $secondary;
+
+// tables
+$table-header-background: $primary;
+$table-header-text: $text-dark;
+$table-header-background-roll: $tertiary;
+$table-header-text-roll: $text-dark;
+
+// traits (defaults to Paizo's colour scheme)
+$trait-rarity-uncommon: var(--color-rarity-uncommon);
+$trait-rarity-rare: var(--color-rarity-rare);
+$trait-rarity-unique: var(--color-rarity-unique);
+$trait-aligment: #5a829f;
+$trait-size: var(--color-bg-size);
+
+// Journal window
+$journal-sidebar-background: $primary;
+
+/**
+ * External components
+ */
+
+// Polyglot
+$polyglot-background: var(--blind-roll);
+$polyglot-border: 1px solid #720073;
+
+/**
+ * Mixins & functions
+ */
+
+// mixin to wrap all custom styles with a selector for this module's journals only.
+@mixin journal-page {
+    .sheet.journal-entry.the-vault-of-echoing-souls {
+        @content;
+    }
+}
+
+// helper mixin for when we want to style h1-h6
+@mixin headings {
+    h1, h2, h3, h4, h5, h6 {
+        @content;
+    }
+}

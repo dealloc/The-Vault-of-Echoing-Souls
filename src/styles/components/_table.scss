@@ -1,0 +1,39 @@
+@use '../theme';
+
+@include theme.journal-page {
+    table {
+        width: calc(100% - 1em);
+
+        thead {
+            text-align: center;
+            color: theme.$table-header-text;
+            background: theme.$table-header-background;
+
+            .inline-roll {
+                text-shadow: none;
+                color: theme.$table-header-text-roll;
+                background: theme.$table-header-background-roll;
+
+                i {
+                    color: theme.$text-dark;
+                }
+            }
+        }
+
+        tr {
+            border: 1px solid black;
+        }
+
+        td {
+            text-align: center;
+            border-right: 1px solid black;
+
+            &:first-child {
+                padding-right: 10px;
+            }
+            &:nth-child(2) {
+                padding-left: 10px;
+            }
+        }
+    }
+}

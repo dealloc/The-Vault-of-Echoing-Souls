@@ -1,0 +1,39 @@
+{
+  "id": "the-vault-of-echoing-souls",
+  "title": "The Vault of Echoing Souls",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Wannes",
+      "email": "info@dealloc.be",
+      "discord": "dealloc",
+      "flags": {}
+    }
+  ],
+  "scripts": [
+    "module.js"
+  ],
+  "styles": [
+    "module.css"
+  ],
+  "flags": {
+    "hotReload": {
+      "extensions": [
+        "css"
+      ]
+    }
+  }
+}

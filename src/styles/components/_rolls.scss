@@ -1,0 +1,27 @@
+@use '../theme';
+
+@include theme.journal-page {
+    // Styles inline links, such as journals, actors, checks, rolls, damage etc.
+    .content-link, .inline-check, .inline-roll, span[data-pf2-action] {
+        border-radius: 3px;
+        color: theme.$roll-text;
+        background: theme.$roll-background;
+        --visibility-gm-bg: transparent;
+
+        &[data-secret] {
+            color: theme.$roll-text-secret;
+            background: theme.$roll-background-secret;
+        }
+
+        i, &::before {
+            color: theme.$text-light;
+            background: transparent;
+        }
+    }
+
+    span[data-pf2-action]::before {
+        // sometimes it's an image we invert, sometimes it's text which gets inverted so light -> dark and vice versa
+        color: theme.$text-dark;
+        filter: invert(1);
+    }
+}

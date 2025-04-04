@@ -1,0 +1,36 @@
+@use '../theme.scss';
+
+@include theme.journal-page {
+    // in order to allow for full-width images, we remove margin from journals
+    .journal-entry-pages {
+        margin-left: 0;
+        margin-right: 0;
+
+        .scrollable {
+            padding-right: 0;
+        }
+
+        // headers are shown larger than the headings in the page
+        .journal-page-header {
+            @include theme.headings {
+                font-size: 3em;
+                font-weight: 400;
+            }
+        }
+
+        // we then re-add the whitespace as padding (which CAN be overriden by it's children unlike margin)
+        .journal-entry-page {
+            padding-left: theme.$journal-padding;
+            padding-right: theme.$journal-padding;
+        }
+    }
+
+    .sidebar {
+        // If you want to style the sidebar, you can do it here.
+        background: theme.$journal-sidebar-background;
+    }
+
+    .window-header {
+        color: theme.$text-light;
+    }
+}

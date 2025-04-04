@@ -1,0 +1,38 @@
+@use '../theme';
+
+@include theme.journal-page {
+    .narrate {
+        position: relative;
+        padding: 1em;
+        margin: 2em;
+        color: theme.$narrate-text;
+        background: theme.$narrate-background;
+        transition: background-color 500ms ease-in-out;
+        border-radius: 10px;
+
+        &::after {
+            content: "💬";
+            display: block;
+            position: absolute;
+            border-radius: 10px;
+            font-size: 1rem;
+            height: 1.2rem;
+            line-height: 1.2rem;
+            width: 1.2rem;
+            top: -0.2rem;
+            right: -0.2rem;
+            text-align: center;
+            padding: 2px;
+            transition: background-color 500ms ease-in-out;
+            background-color: theme.$narrate-background;
+        }
+
+        &:hover {
+            color: theme.$narrate-text-hover;
+            background: theme.$narrate-background-hover;
+            &::after {
+                background: theme.$narrate-background-hover;
+            }
+        }
+    }
+}

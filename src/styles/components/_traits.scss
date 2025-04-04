@@ -1,0 +1,30 @@
+@use '../theme.scss';
+
+@include theme.journal-page {
+    .traits {
+        p {
+            // 2px is the border width of traits, this makes them space nicely
+            margin-left: 2px;
+        }
+
+        .uncommon {
+            background-color: theme.$trait-rarity-uncommon;
+        }
+
+        .rare {
+            background-color: theme.$trait-rarity-rare;
+        }
+
+        .unique {
+            background-color: theme.$trait-rarity-unique;
+        }
+
+        .alignment {
+            background-color: theme.$trait-aligment;
+        }
+
+        .size {
+            background-color: theme.$trait-size;
+        }
+    }
+}

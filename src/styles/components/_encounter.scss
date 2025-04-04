@@ -1,0 +1,49 @@
+@use '../theme.scss';
+
+$encounter-image-max-width: 100px;
+@include theme.journal-page {
+    .encounter {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        color: theme.$encounter-text;
+        background: theme.$encounter-background;
+        margin-left: - theme.$journal-padding;
+        margin-right: - theme.$journal-padding;
+
+        .header {
+            display: grid;
+            align-items: center;
+            grid-template-areas: "image title" "image link";
+            grid-template-columns: $encounter-image-max-width auto;
+            grid-template-rows: 3em 1fr;
+            margin-right: 2em;
+
+            img {
+                grid-area: image;
+                max-width: $encounter-image-max-width;
+                border: none;
+            }
+
+            @include theme.headings {
+                display: flex;
+                grid-area: title;
+                color: theme.$primary;
+                justify-content: space-between;
+                font-weight: bold;
+                border-bottom-width: 2px;
+                margin: 0;
+                margin-top: 1rem;
+                text-transform: uppercase;
+            }
+
+            p {
+                grid-area: link;
+            }
+        }
+
+        & > p {
+            margin-left: 2em;
+        }
+    }
+}

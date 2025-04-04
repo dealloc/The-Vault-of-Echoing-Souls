@@ -1,0 +1,8 @@
+@use '../theme.scss';
+
+// overrides default <img /> styling
+@include theme.journal-page {
+    img {
+        border: none;
+    }
+}

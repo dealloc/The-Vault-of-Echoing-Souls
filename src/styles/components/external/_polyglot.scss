@@ -1,0 +1,12 @@
+@use '../../theme.scss';
+
+@include theme.journal-page {
+    .polyglot-journal {
+        padding: 0 4px;
+
+        &:not([data-tooltip="????"]) {
+            border: theme.$polyglot-border;
+            background: theme.$polyglot-background;
+        }
+    }
+}

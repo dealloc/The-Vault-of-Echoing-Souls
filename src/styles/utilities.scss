@@ -1,0 +1,14 @@
+// utility classes that don't necessarily belong to a specific component.
+@use './theme.scss';
+
+@include theme.journal-page {
+    .right {
+        float: right;
+    }
+
+    .full-width {
+        width: 100%;
+        padding-left: - theme.$journal-padding;
+        padding-right: - theme.$journal-padding;
+    }
+}

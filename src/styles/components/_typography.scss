@@ -1,0 +1,6 @@
+@use '../theme.scss';
+
+@include theme.journal-page {
+    color: theme.$text-dark;
+    font-size: theme.$text-size;
+}
