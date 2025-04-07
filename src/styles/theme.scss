@@ -1,9 +1,17 @@
 @use "sass:color";
 
+// Named colours
+$forged-crimson: #b8392f;
+$molten-bronze: #dd742b;
+$obsidian: #1b1a1a;
+$parchment-ivory: #f0e6d2;
+$dark-copper: #8a4c19;
+$lava-orange: #f95f18;
+
 // Colouring
-$primary: #5e0000;
-$secondary: #171f69;
-$tertiary: #e9d7a1;
+$primary: $forged-crimson;
+$secondary: $molten-bronze;
+$tertiary: $dark-copper;
 
 // Typography
 $text-size: 16px;
@@ -39,8 +47,8 @@ $aside-text: $secondary;
 $aside-border-color: $secondary;
 
 // tables
-$table-header-background: $primary;
-$table-header-text: $text-dark;
+$table-header-background: $obsidian;
+$table-header-text: $text-light;
 $table-header-background-roll: $tertiary;
 $table-header-text-roll: $text-dark;
 
@@ -65,6 +73,10 @@ $polyglot-border: 1px solid #720073;
 /**
  * Mixins & functions
  */
+
+@function asset($url) {
+    @return url('/modules/the-vault-of-echoing-souls/assets' + $url);
+}
 
 // mixin to wrap all custom styles with a selector for this module's journals only.
 @mixin journal-page {

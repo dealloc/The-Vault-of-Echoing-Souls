@@ -6,9 +6,21 @@
         float: right;
     }
 
+    .ar {
+        font-family: 'Amiri';
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .max-w-1\/2 {
+        max-width: 50%;
+    }
+
     .full-width {
-        width: 100%;
-        padding-left: - theme.$journal-padding;
-        padding-right: - theme.$journal-padding;
+        width: calc(100% + 32px);
+        margin-left: - theme.$journal-padding;
+        margin-right: - theme.$journal-padding;
+        max-width: none;
     }
 }

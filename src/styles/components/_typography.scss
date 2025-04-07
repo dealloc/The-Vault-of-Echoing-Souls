@@ -1,6 +1,42 @@
 @use '../theme.scss';
 
+@font-face {
+    font-family: 'Lora';
+    src: local('Lora'), theme.asset('/fonts/Lora.ttf') format("opentype");
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: local('EB Garamond'), theme.asset('/fonts/EB-Garamond.ttf') format("opentype");
+}
+
 @include theme.journal-page {
     color: theme.$text-dark;
     font-size: theme.$text-size;
+    font-family: 'Lora';
+    text-align: justify;
+    font-weight: 500;
+
+    // headers are shown larger than the headings in the page
+    .journal-page-header {
+        @include theme.headings {
+            font-size: 3em;
+            font-weight: 600;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    }
+
+    strong {
+        color: theme.$tertiary;
+    }
+
+    @include theme.headings {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    h3 {
+        font-size: 1.3em;
+        border-bottom: none;
+        color: theme.$primary;
+    }
 }

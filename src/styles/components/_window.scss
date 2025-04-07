@@ -10,16 +10,8 @@
             padding-right: 0;
         }
 
-        // headers are shown larger than the headings in the page
-        .journal-page-header {
-            @include theme.headings {
-                font-size: 3em;
-                font-weight: 400;
-            }
-        }
-
         // we then re-add the whitespace as padding (which CAN be overriden by it's children unlike margin)
-        .journal-entry-page {
+        .journal-page-content, .journal-page-header {
             padding-left: theme.$journal-padding;
             padding-right: theme.$journal-padding;
         }
@@ -28,9 +20,24 @@
     .sidebar {
         // If you want to style the sidebar, you can do it here.
         background: theme.$journal-sidebar-background;
+        border-image-slice: 205 0 205 0 fill;
+        border-image-width: 50px 0px 50px 0px;
+        border-image-outset: 0px 0px 0px 0px;
+        border-image-repeat: repeat repeat; 
+        border-image-source: theme.asset('/layouts/sidebar-border.webp');
+        padding: 50px 0;
+        border-style: solid;
     }
 
     .window-header {
         color: theme.$text-light;
+    }
+
+    .journal-entry-content {
+        background: theme.asset('/layouts/background.webp');
+
+        .journal-header {
+            display: none;
+        }
     }
 }

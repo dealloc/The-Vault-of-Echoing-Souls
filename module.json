@@ -1,7 +1,10 @@
 {
   "id": "the-vault-of-echoing-souls",
   "title": "The Vault of Echoing Souls",
-  "version": "1.0.0",
+  "version": "#{VERSION}#",
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
   "compatibility": {
     "minimum": "12",
     "verified": "12"
@@ -35,5 +38,18 @@
         "css"
       ]
     }
-  }
+  },
+  "packs": [
+    {
+      "name": "the-vault-of-echoing-souls",
+      "label": "The Vault of Echoing Souls",
+      "path": "packs/the-vault-of-echoing-souls",
+      "type": "Adventure",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ]
 }

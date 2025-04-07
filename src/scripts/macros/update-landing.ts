@@ -6,9 +6,13 @@ export default async function(): Promise<void> {
 
     const result = await pickOptionDialog([
         {
-            label: `Landing Art 1`,
-            value: `/modules/${CONSTANTS.id}/assets/...`,
-        }
+            label: `Asphodel Mountains`,
+            value: `/modules/${CONSTANTS.id}/assets/art-cover/asphodel-mountains.webp`,
+        },
+        {
+            label: `Khavak-Zar entrance`,
+            value: `/modules/${CONSTANTS.id}/assets/art-cover/mountain-entrance.webp`,
+        },
     ]);
 
     if (result !== null) {

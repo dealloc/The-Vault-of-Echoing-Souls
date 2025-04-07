@@ -1,0 +1,21 @@
+@use '../theme.scss';
+
+@include theme.journal-page {
+    img.banner-image {
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    h1.banner-title {
+        padding: 40px;
+        margin-top: -4px;
+        font-weight: bold;
+        text-align: center;
+        border-image-slice: 212 208 212 210 fill;
+        border-image-width: 40px 40px 40px 40px;
+        border-image-outset: 0px 0px 0px 0px;
+        border-image-repeat: round round; 
+        border-image-source: theme.asset('/layouts/heading-border.png');
+        border-style: solid;
+    }
+}
